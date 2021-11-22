@@ -318,13 +318,6 @@ function render() {
             gl.drawArrays(gl.TRIANGLES, 0, cylinder.vertices.length);
         }
     }
-    // // axis lines
-    // if (axisLinesToggle) {
-    //     axis.eRotate(...theta);
-    //     sendData(axis, buffers, attributes);
-    //     gl.uniformMatrix4fv(rMatLoc, false, flatten(axis.rMat));
-    //     gl.drawElements(gl.LINES, axis.indices.length, gl.UNSIGNED_SHORT, 0);
-    // }
 
     requestAnimationFrame(render);
 }
@@ -353,12 +346,6 @@ function sendData(entity, buffers, attributes, uniforms) {
 }
 
 function addEventListeners() {
-    // document.getElementById("toggle-axis-lines").onclick = function () {
-    //     if (this.checked)
-    //         axisLinesToggle = true;
-    //     else
-    //         axisLinesToggle = false;
-    // }
 
     document.getElementById("toggle-light").onclick = function () {
         if (this.checked) {
@@ -389,9 +376,6 @@ function addEventListeners() {
 
     document.getElementById("light-reset").onclick = function () {
         document.getElementById("light-position-slider").value = .765;
-        document.getElementById("light-ambient-slider").value = defaultLightSource.lAmbient[0];
-        document.getElementById("light-diffuse-slider").value = defaultLightSource.lDiffuse[0];
-        document.getElementById("light-specular-slider").value = defaultLightSource.lSpecular[0];
 
         Object.assign(lightSource, defaultLightSource);
         terrain.setLightSource(lightSource);
