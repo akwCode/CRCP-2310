@@ -2,6 +2,7 @@
 <html>
     <meta charset="utf-8">
 
+<!--  The lighting computation is based off this code: http://interactivecomputergraphics.com/Code/06/   -->
     <script id="vertex-shader" type="x-shader/x-vertex">
         #version 300 es
         precision mediump float;
@@ -92,7 +93,6 @@
     </style>
 
     <body>
-<!--    <div style="width:1200px; margin:0 auto;">-->
         <div class="row">
             <div class="column">
                 <canvas id="gl-canvas" width="768" height="768">
@@ -138,15 +138,7 @@
                            name="wind-slider" min="0.0" max="1.0" value="0.0" step="0.01"/>
             </div>
         </div>
-<!--    </div>-->
         <br/>
-<!--        <h3>Axis Options</h3>-->
-<!--        <input type="checkbox" id="toggle-axis-lines" name="toggle-axis-lines">-->
-<!--        <label for="toggle-axis-lines">Toggle Axis Lines</label><br>-->
-<!--        <input type="checkbox" id="toggle-grid-points" name="toggle-grid-points">-->
-<!--        <label for="toggle-grid-points">Toggle Grid Points</label><br>-->
-<!--        <input type="checkbox" id="toggle-grid-lines" name="toggle-grid-lines">-->
-<!--        <label for="toggle-grid-lines">Toggle Grid Lines</label><br>-->
 
 
     </body>
